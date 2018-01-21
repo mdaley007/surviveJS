@@ -63,7 +63,7 @@ export default class Lane extends Component {
             </div>
         )
     }
-    editNote(id, task) {
+    editNote = (id, task) => {
         if(!task.trim()) {
             NoteActions.update({id, editing: false})
             return
@@ -108,7 +108,7 @@ export default class Lane extends Component {
 
         LaneActions.update({id: laneId, editing: true})
     }
-    activateNoteEdit(id) {
+    activateNoteEdit = (id) => {
         NoteActions.update({id, editing: true})
     }
 }
